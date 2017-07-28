@@ -1,6 +1,6 @@
 const express          = require('express');
 const authMiddleware   = require('../middleware/auth');
-const alumniController = require('../controllers/alumni');
+const alumniEntityController = require('../controllers/alumniEntity');
 
 const config = app => {
   const apiRouter = express.Router();
@@ -13,7 +13,7 @@ const config = app => {
   // ======================================================
   // alumni controller
   // ======================================================
-  apiRoute.use('/alumni', alumniController);
+  apiRoute.use('/alumnientity', alumniEntityController);
   
   // ======================================================
   // Mount Router to app
@@ -27,7 +27,7 @@ const config = app => {
 }
 
 function handleUnknownRoutes(req, res) {
-  res.status(404);
+  res.status(404).send();
 }
 
 module.exports = config;

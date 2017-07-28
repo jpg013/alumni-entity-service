@@ -4,14 +4,15 @@ const getRequestBearerToken = headers => {
   return headers['authorization'];
 }
 
-function isAccessible(req, res, next) {
+function auth(req, res, next) {
   const token = getRequestBearerToken(req.headers);
   if (!token) {
     return res.status(401);
   }
-  
+  if (crypto.decrypt(token) !== process.env.INNOTWIND_SECRET) {
+    return res.status(401);
+  }
+  return next();
 }
 
-module.exports = {
-  isAccessible
-};
+module.exports = auth;

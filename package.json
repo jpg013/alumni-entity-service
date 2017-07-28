@@ -1,7 +1,7 @@
 {
-  "name": "jinro",
+  "name": "Alumni Enttiy Service",
   "version": "1.0.0",
-  "description": "Institution Alumni ETL service",
+  "description": "Service to manage alumni entities",
   "private": true,
   "babel": {
     "presets": [
@@ -17,7 +17,6 @@
     "crypto": "^0.0.3",
     "dotenv": "^4.0.0",
     "express": "^4.14.0",
-    "json2csv": "^3.7.3",
     "mongoose": "^4.7.7",
     "morgan": "^1.7.0",
     "nodemon": "^1.11.0",
