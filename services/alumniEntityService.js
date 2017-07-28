@@ -1,4 +1,3 @@
-const AlumniEntityFactory = require('../factories/alumniEntityFactory');
 const AlumniEntityModel   = require('../models/alumniEntityModel');
 
 const defaultFields = {

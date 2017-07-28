@@ -13,7 +13,7 @@ const config = app => {
   // ======================================================
   // alumni controller
   // ======================================================
-  apiRoute.use('/alumnientity', alumniEntityController);
+  apiRouter.use('/alumnientity', alumniEntityController);
   
   // ======================================================
   // Mount Router to app

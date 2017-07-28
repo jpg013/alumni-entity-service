@@ -19,7 +19,7 @@ function responseHandler(req, res) {
 
 function upsertAlumniEntity(req, res, next) {
   const { alumniEntityData } = req.body;
-  alumniEntityService.upsertAlumniEntity(alumniEntityData, (err, results) => {
+  alumniEntityService.upsert(alumniEntityData, (err, results) => {
     if (err) {
       req.error = err;
     } else {
